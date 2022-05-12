@@ -24,6 +24,7 @@ $maxWidth: 1920;
 *{
     box-sizing: border-box;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 //прозрачный с обводкой

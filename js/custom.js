@@ -182,13 +182,8 @@ function theRotator(){
 		}
 	})
 
-
-
-
-
-
-
-	$(document).ready(function() {		
+	$(document).ready(function() {	
+		//прокрутка фиксировать 	
 		$(window).scroll(function(){
 			var st = $(window).scrollTop();
 			  if(st>100){
@@ -200,6 +195,7 @@ function theRotator(){
 			  }
 		});
 
+		//вверх
 		$('body').on('click', '.top-down', function (e) {
 			$("body,html").animate({
 			scrollTop: 0
@@ -207,6 +203,9 @@ function theRotator(){
 			//$(this).hide();
 			return false;
 		});
+
+		
+
 
 	});
 

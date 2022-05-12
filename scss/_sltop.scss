@@ -90,7 +90,7 @@
 @media(max-width:1200px){
     .bkg-heder-sl{
         background: radial-gradient(158.14% 533.02% at -71.74% 81.71%, rgba(95, 182, 179, 0.7) 0%, rgba(115, 177, 82, 0) 100%), #363636;
-        max-height: 536px;
+        max-height: 450px;
         &__el{display: none;}
     }
  
@@ -99,7 +99,7 @@
 @media (max-width: 991px) {
     .sl-img a{display: block; height: 300px;} 
     .bkg-heder-sl{
-        max-height: calc(50% - 10px);
+        max-height: 430px;
         a{min-height: 213px;}
     }
 }
@@ -116,14 +116,14 @@
         img{height: 100%;object-fit: cover;}
     }
     .bkg-heder-sl {
-        max-height:44%;
+        max-height:400px;
     }
 }
 
 @media(max-width:567px){
     .sl-img a{height: 184px;}
     .bkg-heder-sl
-    {max-height:42%;
+    {max-height:365px;
         border-bottom-right-radius: 16px;
         border-bottom-left-radius: 16px;
     }
