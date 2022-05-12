@@ -1,7 +1,23 @@
+.bkg-heder-sl{
+    position: absolute;
+    top: 0;left: 0;
+    width: 100%;
+    height:896px;
+    //overflow: hidden;
+    border-bottom-right-radius:40px;
+    border-bottom-left-radius:40px;
+    z-index: -1;
+    img{
+      position: absolute;  width: 100%;height: 100%; object-fit: cover;
+    }
+    &__el {float:left; position:absolute; list-style: none;}
+    &__el.show {z-index:500;}
+    
+}
 header {
-    background: #555;
-    min-height: 300px;
     position: relative;
+    margin-top: 40px;
+    margin-bottom: 47px;
 }
 
 .header-top {
@@ -26,41 +42,69 @@ header {
 }
 .right-container {
     position: absolute;
-    right: 16px;
-    top: 67px;
+    right: 70px;
+    top: 25px;
 
     a {
         display: inline-block;
         color: #fff;
-        transform: rotate(-90deg);
+        transform: rotate(-180deg);
         letter-spacing: 0.215em;
         font-size: 12px;
         position: absolute;
-        height: 24px;
-        width: 149px;
+        height: 135px;
         right: 78px;
         top: -10px;
         right: 0;
+        writing-mode:tb-rl;
     }
 }
 .top-down {
-    position: absolute;
+    position: fixed;
     left: 72px;
-    bottom: 20px;
+    bottom:114px;
+    z-index: 100;
+    .v2{display: none;}
+    &.fix{
+        bottom: 39px;
+        .v2{display: block;}
+        .v1{display: none;}
+    }
 }
 .eml-text {
     font-size: 12px;
     line-height: 150%;
     letter-spacing: 0.215em;
-    transform: rotate(-90deg);
-    padding-left: 30px;
-    position: absolute;
-    right: 0;
-    bottom: 75px;
+    transform: rotate(-180deg);
+    padding-left: 21px;
+    position: fixed;
+    right: 58px;
+    writing-mode:tb-rl;
+   bottom: 185px;
+    z-index: 100;
+    height: 135px;
+    color:#fff;
+    &::before{
+        content: "";
+        position: absolute;
+        background: url(../img/ico/smal/email.svg) no-repeat;
+        width: 30px;height: 30px;
+        top:-54px;
+        left: 12px;
+        transform: rotate(-180deg);
+    }
+    &.fix{
+        color: var(--color-font);
+        bottom: 90px;
+        &::before{
+            background: url(../img/ico/smal/email-blek.svg) no-repeat;
+        }
+    }
     img {
         position: absolute;
         left: -8px;
         top: -4px;
+        display: none;
     }
 }
 
@@ -87,6 +131,7 @@ nav {
         justify-content: space-between;
         //li{flex: 1;}
         li{position: relative;}
+        & > li > a{white-space:nowrap; }
     }
     .sbm {
         position: relative;
@@ -121,7 +166,15 @@ nav {
     min-width: 360px;
     left: 0;
     z-index: 10;
-
+    &::before{
+        content: '';
+        background: #fff;
+        width: 35px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     .col-title {
         letter-spacing: 0.215em;
         margin:30px  0 10px;
@@ -132,6 +185,8 @@ nav {
         padding: 5px 0;
         color: var(--color-font);
         transition: 0.3s all;
+        line-height: 1.2;
+        padding: 10px 0;
         &:hover{
             color:var(--color-a);
             /*text-shadow: 0 0 1px var(--color-a);*/
@@ -163,31 +218,39 @@ nav {
 
 .search {
     position: relative;
-    padding: 1% 32px 1% 48px;
+    padding: 1% 1% 1% 1%;
     background: rgba(54, 54, 54, 0.6);
     border-radius: 40px;
     max-height: 48px;
     display: inherit;
     margin-right: 24px;
+    flex: 1;
+    max-width: 243px;
+    min-width: 50px;
+    height: 48px;
+
+
     input {
         font-weight: 500;
         font-size: 14px;
         line-height: 14px;
+        width: 100%;
 
         background: transparent;
         border: none;
         color: #fff;
     }
     a {
-        position: absolute;
-        left: 17px;
+        margin-right: 10px; 
+        display: flex;
+        align-items: center;
     }
 }
 .h-dop {
     display: flex;
     gap: 24px;
 
-    a {
+    .circl {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -200,6 +263,10 @@ nav {
         color: #fff;
         border-radius: 50%;
         overflow: hidden;
+        font-size: 14px;
+        &:hover{
+            opacity: 0.6;
+        }
     }
     .lk {
         background: #29bae2;
@@ -213,14 +280,104 @@ nav {
     }
 }
 
-@media (max-width: 1500px) {
-    .nav-container {
-        padding: 0 40px;
+.main-str {
+    display: none;
+    margin-bottom: 6rem;
+    &.show{
+        display: block;
     }
+    &__h1 {
+        font-weight: 700;
+        font-size: 104.837px;
+        line-height: 126px;
+        color: #FFFFFF;
+        margin-bottom: 2rem;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 150%;
+        color: #FFFFFF;
+        max-width: 480px;
+        margin-bottom: 2rem;
+    }
+}
+.h-dop .search-kn{display: none;}
+
+
+@media (max-width: 1700px) {
+    .soc-h{left:15px;}
+    .top-down{left:15px;}
+    .right-container{right: 15px;}
+    .eml-text{right: 0px;}
+}
+@media (max-width: 1564px) {
     .logo {
         margin-right: 20px;
     }
     nav .menu {
         margin-right: 20px;
     }
+    .soc-h,
+    .right-container,
+    .eml-text{display: none;}
+}
+
+
+@media (max-width: 1200px) {
+    .top-down{
+        .v1{display: none;}
+        .v2{display: block;}
+        bottom: 39px;
+    }
+}
+
+@media (max-width: 1120px) {
+     .search{display: none;}
+     .logo img{height: 48px;} 
+     .h-dop .search-kn{
+         display: flex;
+         background: #000;
+         border-color: #000;
+         &:hover{
+             opacity: 0.6;
+         }
+     }
+}
+
+.burger{display: none;}
+@media (max-width: 991px) {
+    //.h-dop .logo{margin: 0; }
+    .logo{flex:1;}
+    .burger{
+        display: block;
+        position: relative;
+        width: 24px;
+        height: 20px;
+        border-top: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        border-left: none;
+        border-right:none;
+        background: transparent;
+        outline:none;
+        margin-right: 1rem;
+        &::before{
+            content: "";
+            background: #fff;
+            position: absolute;
+            width: 23px;
+            height: 2px;
+            left: 0;
+            top: 7px;
+        }
+    }
+    nav{display: none;}
+}
+
+
+@media (max-width: 460px) {
+    .h-dop{gap:6px;}
+    .logo img{height: 36px;}
+    .h-dop .circl{width: 36px;height: 36px;}
 }

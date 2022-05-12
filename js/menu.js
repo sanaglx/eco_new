@@ -1,3 +1,6 @@
+var dax = new DynamicAdapt("max");  
+dax.init();
+
 $(function($){
  $('.menu>li>a').hover(function(){
      // 
