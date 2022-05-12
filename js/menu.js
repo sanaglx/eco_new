@@ -42,11 +42,7 @@ $(function($){
     }else{
 
     }
- },
- function(){
-    // $('.sbm').removeClass('active');
- })
- 
+  })
 })
 
 $('body').on('mouseleave','.submenu', function(){

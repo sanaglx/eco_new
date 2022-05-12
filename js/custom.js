@@ -151,26 +151,27 @@ function theRotator(){
 }
 
 	$('body').on('click','.elem',function (e,i) { 
-		if($(document).width() < 1201){return false;}
-		var t = $(this);
-		var a = $(this).attr('data-el');
-		var b = $('.bkg-heder-sl__el.show').attr('data-el');
-		current = $('.bkg-heder-sl__el.show');
-		$('.elem').removeClass('active');
-		t.addClass('active');
-
-		$('.bkg-heder-sl__el[data-el='+a+']')
-			.addClass('show')
-			.animate({opacity: 1.0}, 1000);
+		if($(document).width() > 1199){
 		
-		$('.main-str').removeClass('show');	
-		$('.main-str[data-el='+a+']').addClass('show');	
+			var t = $(this);
+			var a = $(this).attr('data-el');
+			var b = $('.bkg-heder-sl__el.show').attr('data-el');
+			current = $('.bkg-heder-sl__el.show');
+			$('.elem').removeClass('active');
+			t.addClass('active');
 
-		if(a!=b){
-			current.animate({opacity: 0.0}, 1000)
-			.removeClass('show').removeClass('active');
+			$('.bkg-heder-sl__el[data-el='+a+']')
+				.addClass('show')
+				.animate({opacity: 1.0}, 1000);
+			
+			$('.main-str').removeClass('show');	
+			$('.main-str[data-el='+a+']').addClass('show');	
+
+			if(a!=b){
+				current.animate({opacity: 0.0}, 1000)
+				.removeClass('show').removeClass('active');
+			}
 		}
-	
 
 	});
 
