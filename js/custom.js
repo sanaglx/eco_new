@@ -263,4 +263,14 @@ $(function ($) {
 		})
 	}
 });
+$('body').on('click','.product-visible-all',function (e) { 
+	let ln= $('.products')
+	if(!ln.hasClass('active')){
+		$('.products').addClass('active')
+	}else{
+		$('.products').removeClass('active');
+	}
+
+	return false;
+});
 
