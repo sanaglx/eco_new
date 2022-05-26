@@ -11,6 +11,11 @@ $maxWidth: 1920;
         font-size: $pcSize + px;
     }
 }
+@mixin border($lg, $sm){
+    border-radius: #{$lg + px};
+    @media(max-width:992px){border-radius: #{$lg/1.5 + px};}
+    @media(max-width:768px){border-radius: #{$sm + px};}
+}
 
 @mixin rimg($btm) {
     @media(max-width:$maxWidth+px){

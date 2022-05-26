@@ -87,7 +87,7 @@ $(function ($) {
 		//center:true,
 		stagePadding: 280,
 		loop: true,
-		items: 4,
+		items: 1,
 		margin: 20,
 		//autoplay: false,
 		dots: false,
@@ -97,7 +97,8 @@ $(function ($) {
 		responsive: {
 			0: {
 				//center:true,
-				stagePadding: 20,
+				stagePadding:30,
+				autoWidth:true,
 				items: 1,
 			},
 			370: {
@@ -147,62 +148,66 @@ $(function ($) {
 		//center:true,
 		//stagePadding: 280,
 		loop: true,
-		items: 3,
+		items: 1,
 		margin: 20,
 		//autoplay: false,
 		dots: false,
-		nav: true,
+		nav: false,
 		navText:
 		["<i class='news-str-left1 strelka' aria-hidden='true'><img src='img/ico/left1.svg'></i>",
 		"<i class='news-str-right1 strelka' aria-hidden='true'><img src='img/ico/right1.svg'></i>"],
-		/*responsive: {
+		responsive: {
 			0: {
 				//center:true,
-				stagePadding: 20,
+				stagePadding:20,
+				autoWidth:true,
 				items: 1,
-			},
-			370: {
-				center: true,
-				stagePadding: 50,
-				items: 1,
-			},
-			480: {
-				//center:true,
-				stagePadding: 100,
-				items: 1,
-			},
-			570: {
-				//center:true,
-				stagePadding: 120,
-				items: 1,
-			},
-			670: {
-				//center:true,
-				stagePadding: 15,
-				items: 2
-			},
-			992: {
-				stagePadding: 160,
-				items: 2,
-			},
-			1260: {
-				items: 2,
 			},
 
-			1450: {
-				stagePadding: 160,
-				items: 3,
+			410: {
+				//center:true,
+				stagePadding: 20,
+				autoWidth:true,
+				items: 1,
 			},
-			1800: {
-				stagePadding: 320,
-				margin: 48,
-				items: 3,
+			567: {
+				//center:true,
+				nav: true,
+				//stagePadding: 150,
+				items: 2,
 			},
-			2000: {
+			920: {
+				nav: true,
+				stagePadding: 70,
+				items: 2
+			},
+			1200: {
+				nav: true,
+				stagePadding: 0,
 				items: 3,
 			}
-		}*/
+
+
+
+		}
 	});
+
+	$(".owl-bred").owlCarousel({
+		loop: false,
+		autoWidth:true,
+		items: 2,
+		margin: 20,
+		dots: false,
+		nav: false,
+	})
+	$(".menu-catalog").owlCarousel({
+		loop: false,
+		autoWidth:true,
+		items: 2,
+		margin: 60,
+		dots: false,
+		nav: false,
+	})
 
 })
 
@@ -297,20 +302,18 @@ $(function ($) {
 							i = index
 						});
 						x = (i - 1) * 240;
-						((cur_width) > x) ? cur_width = -240 : cur_width = cur_width
+						((cur_width) > x) ? cur_width = x-240 : cur_width = cur_width
 						b = $(this)
 						event = $(this)
 					}
 					if (phase == "end") {
 						if (direction == 'left') {
-							//сработает при движении влево
-							console.log(cur_width)
+							//console.log(cur_width+"x="+x+" l")
 							cur_width = cur_width + r
 							b.find('.cat-list').css({ 'transform': `translateX(-${cur_width}px)` })
 						}
 						if (direction == 'right') {
-							//сработает при движении вправо
-							console.log(cur_width)
+							//console.log(cur_width+"x="+x+" r")
 							cur_width = cur_width - r
 							b.find('.cat-list').css({ 'transform': `translateX(-${cur_width}px)` })
 						}
@@ -328,8 +331,10 @@ $('body').on('click','.product-visible-all',function (e) {
 	let ln= $('.products')
 	if(!ln.hasClass('active')){
 		$('.products').addClass('active')
+		$('.product-visible-all').addClass('active')
 	}else{
 		$('.products').removeClass('active');
+		$('.product-visible-all').removeClass('active');
 	}
 
 	return false;
