@@ -30,6 +30,7 @@ $(function($){
  $('.menu>li>a').hover(function(){
     if($(document).width()>992){
       $('.sbm').removeClass('active') 
+      $('.menu>li>a').removeClass('active') 
       var a = $(this), d = 0, w = 0
       a.addClass('active');
       //a.find('.submenu').addClass('active')
