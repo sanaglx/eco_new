@@ -145,7 +145,13 @@ nav {
         justify-content: space-between;
         //li{flex: 1;}
         li{position: relative;}
-        & > li > a{white-space:nowrap; }
+        & > li > a{
+            white-space:nowrap; 
+            color:#FFF;
+        }
+        & > li > a.active{
+            color: #62AB08;
+        }
     }
     .sbm {
         position: relative;

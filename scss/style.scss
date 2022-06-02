@@ -85,11 +85,11 @@ h3,
     background: linear-gradient(97.76deg, #61c1cd 0%, #75ae41 100%);
     box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
     transition: 0.3s all;
-    color: #e1e1e1;
+    color: #fff;
     font-size: 16px;
     &:hover {
         background: linear-gradient(-20.76deg, #597e37 0%, #52b3bf 100%);
-        color: #fff;
+        color: #e1e1e1;
     }
 }
 .btn-border-wrap {
@@ -163,7 +163,8 @@ h3,
     display: flex;
     justify-content: center;
     z-index: 0;
-    margin-bottom: 136px;
+   max-width: 1920px;
+    margin: 0 auto 136px;
     .union {
         position: absolute;
         z-index: -1;
@@ -552,6 +553,7 @@ h3,
                 color: #fff;
                 text-decoration: underline;
                 font-size: 12px;
+                opacity: 0.3;
             }
         }
         li:nth-child(2) {
@@ -571,7 +573,12 @@ h3,
         margin-right: 10px;
     }
 }
-
+.soc_title{
+    color: #fff;
+    font-size: 12px;
+    opacity: 0.3;
+    margin-right: 15px;
+}
 .btn-footer {
     font-size: 12px;
     padding: 4.5px 10px;
@@ -647,7 +654,7 @@ h3,
         &.active,
         &:hover{
             opacity: 0.6;
-            border-bottom: 1px solid rgba(255, 0, 0, 1);
+            border-bottom: 1px solid var(--color-a);
         }
         
     }
@@ -729,9 +736,22 @@ h3,
     padding: 32px 0 10px;
     transition: transform 0.2s ease-out;
 }
+
+.cat-item-2{
+    background: transparent;
+    border-radius: 2.1rem;
+    padding: 2px;
+    transition: 0.3s all;
+    &:hover{
+        background: linear-gradient(135deg,#5DC5EC
+        50%, #75AC2C
+        50%);
+        opacity: 0.8;
+    }
+}
 .cat-item {
     background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+   // border: 2px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12);
     border-radius: 2rem;
     padding: 24px;
@@ -741,6 +761,14 @@ h3,
     text-align: center;
     display: flex;
     flex-direction: column;
+
+ 
+
+    &:hover{
+        .cat-item__brand{
+            color:var(--color-a)
+        }
+    }
 
     &__img {
         width: 168px;
@@ -764,6 +792,9 @@ h3,
     &__brand {
         font-size: 12px;
         line-height: 150%;
+        color:var(--color-font);
+        letter-spacing: 0.1rem;
+        font-weight: 600;
     }
 }
 

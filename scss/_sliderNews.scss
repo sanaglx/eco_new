@@ -15,6 +15,17 @@
 
         display: flex;
         flex-direction: column;
+        transition: 0.3s all;
+        &:hover{
+            .sl-nw_text{
+                color:var(--color-a); 
+                transition: 0.3s all;
+            }
+            .sl-nw_img img{
+                transform: scale(1.05);
+                transition: 0.3s all;
+            }
+        }
     }
     .sl-nw {
         &_img {
@@ -30,6 +41,7 @@
 
         &_text {
             @include font(18, 16);
+            color:var(--color-font);
             line-height: 150%;
             flex: 1;
         }
