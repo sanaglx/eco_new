@@ -84,6 +84,10 @@
   }
 }
 
+.white {
+  color: #fff;
+}
+
 :root {
   --color-font: #363636;
   --color-a: #29bae2;
@@ -3104,6 +3108,20 @@ nav ul {
 
 .product-soc-prefooter {
   margin-bottom: 105px;
+}
+
+.page-title-block {
+  max-width: 920px;
+}
+
+.page-title-block h1 {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.page-title-block p {
+  padding-bottom: 60px;
+  color: #fff;
 }
 
 @media (max-width: 1800px) {
