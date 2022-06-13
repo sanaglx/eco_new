@@ -82,14 +82,26 @@ h3,
 
 .btn-gradient {
     padding: 12px 16px;
-    background: linear-gradient(97.76deg, #61c1cd 0%, #75ae41 100%);
-    box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+    background: linear-gradient(97.76deg, #93D5DD 0%, #97C76A 100%);
+    box-shadow: 0px 4px 30px rgba(99, 205, 234, 0.39);
     transition: 0.3s all;
     color: #fff;
     font-size: 16px;
     &:hover {
-        background: linear-gradient(-20.76deg, #597e37 0%, #52b3bf 100%);
+        background: linear-gradient(97.76deg, #3394A0 36.78%, #486B28 100%);
+        box-shadow: 0px 4px 30px rgba(21, 125, 154, 0.39);
+        transition: 0.3s all;
         color: #e1e1e1;
+    }
+    &:active{
+        background: linear-gradient(97.76deg, #61C1CD 0%, #75AE41 100%);
+        transition: 0.3s all;
+        box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+    }
+    &.disbl{
+        opacity:0.2;
+        box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+        transition: 0.3s all;
     }
 }
 .btn-border-wrap {
@@ -367,8 +379,25 @@ h3,
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: all 0.3s;
+        }
+        &:hover{
+            
+            img{
+             transform: scale(1.1);
+            }
         }
     }
+
+    &-block__text{
+        color:var(--color-font);
+        opacity: 0.6;
+        &:hover{
+            color: var(--color-a);
+            opacity: 1;
+        }
+    }
+
 }
 .stati-item_block {
     flex: 1;
@@ -476,8 +505,7 @@ h3,
 }
 .pfoot-item {
     flex: 1;
-    max-width: 360px;
-    min-width: 280px;
+    max-width: 257px;
 }
 .menuf {
     a {
@@ -1428,7 +1456,7 @@ h3,
     background: #FFFFFF;
     border: 0.921495px solid rgba(0, 0, 0, 0.05);
     //box-shadow: 0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12);
-    @include border(37,16)
+    @include border(37,16);
     text-align: center;
     padding: 23px 10px 30px;
     &__img {

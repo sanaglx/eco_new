@@ -217,9 +217,9 @@ h3,
 
 .btn-gradient {
   padding: 12px 16px;
-  background: linear-gradient(97.76deg, #61c1cd 0%, #75ae41 100%);
-  -webkit-box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
-          box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+  background: linear-gradient(97.76deg, #93D5DD 0%, #97C76A 100%);
+  -webkit-box-shadow: 0px 4px 30px rgba(99, 205, 234, 0.39);
+          box-shadow: 0px 4px 30px rgba(99, 205, 234, 0.39);
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
   color: #fff;
@@ -227,8 +227,28 @@ h3,
 }
 
 .btn-gradient:hover {
-  background: linear-gradient(-20.76deg, #597e37 0%, #52b3bf 100%);
+  background: linear-gradient(97.76deg, #3394A0 36.78%, #486B28 100%);
+  -webkit-box-shadow: 0px 4px 30px rgba(21, 125, 154, 0.39);
+          box-shadow: 0px 4px 30px rgba(21, 125, 154, 0.39);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
   color: #e1e1e1;
+}
+
+.btn-gradient:active {
+  background: linear-gradient(97.76deg, #61C1CD 0%, #75AE41 100%);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+          box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+}
+
+.btn-gradient.disbl {
+  opacity: 0.2;
+  -webkit-box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+          box-shadow: 0px 4px 30px rgba(41, 186, 226, 0.39);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 
 .btn-border-wrap {
@@ -1547,6 +1567,23 @@ nav ul {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.stati-item_img:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.stati-item-block__text {
+  color: var(--color-font);
+  opacity: 0.6;
+}
+
+.stati-item-block__text:hover {
+  color: var(--color-a);
+  opacity: 1;
 }
 
 .stati-item_block {
@@ -1708,8 +1745,7 @@ nav ul {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  max-width: 360px;
-  min-width: 280px;
+  max-width: 257px;
 }
 
 .menuf a {
