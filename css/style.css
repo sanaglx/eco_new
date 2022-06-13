@@ -3902,3 +3902,167 @@ nav ul {
     text-align: center;
   }
 }
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
+.modal-form {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -56%);
+          transform: translate(-50%, -56%);
+  padding: 29px 35px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  max-width: 504px;
+  width: calc(100% - 32px);
+  z-index: 100;
+  max-height: 90vh;
+  overflow: auto;
+  margin: 10px 0;
+}
+
+@media (max-width: 1600px) {
+  .modal-form__title {
+    font-size: calc(18px + 14 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 1600px) {
+  .modal-form__title {
+    font-size: 32px;
+  }
+}
+
+.modal-form__deckr {
+  max-width: 347px;
+  margin: 21px 0;
+}
+
+.modal-form label {
+  font-weight: 500;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-form input {
+  border: none;
+  width: 100%;
+  /*opacity: 0.6;*/
+}
+
+@media (max-width: 1600px) {
+  .modal-form input {
+    font-size: calc(16px + 2 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 1600px) {
+  .modal-form input {
+    font-size: 18px;
+  }
+}
+
+.modal-form .btn {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+@media (max-width: 1600px) {
+  .modal-form .btn {
+    font-size: calc(18px + 2 * ((100vw - 320px) / 1600));
+  }
+}
+
+@media (min-width: 1600px) {
+  .modal-form .btn {
+    font-size: 20px;
+  }
+}
+
+.modal-form .error-f {
+  color: #f00;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.close-f {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: 16px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.close-f:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  background: #000;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.close-f::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 1px;
+  background: #000;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.close-f:hover {
+  opacity: 0.6;
+}
+
+.form-item {
+  padding: 10px 17px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 21px;
+}
+
+.form-item span {
+  margin-left: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.form-item textarea {
+  width: 100%;
+  min-height: 168px;
+  border: none;
+}
+
+.form-item:hover {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.politika {
+  font-size: 13px;
+  line-height: 150%;
+}
+
+.politika a {
+  display: inline;
+}

@@ -1,0 +1,102 @@
+.fixed {
+    position:fixed;
+    width:100%;
+    height: 100vh; 
+    }
+.modal-form {
+    position: fixed;
+    left:50%;top: 50%;
+    transform: translate(-50%, -56%);
+    padding: 29px 35px;
+    background: #fff;
+    box-shadow: 0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    max-width: 504px;
+    width:calc(100% - 32px) ;
+    z-index: 100;
+    max-height: 90vh;
+    overflow: auto;
+    margin: 10px 0;
+
+    &__title {
+        @include font(32,18);
+    }
+
+    &__deckr {
+        max-width: 347px;
+        margin: 21px 0;
+    }
+    label{
+        font-weight: 500;
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    input{
+        border:none;
+        width: 100%;
+        @include font(18,16)
+        /*opacity: 0.6;*/
+    }
+    .btn{
+        width: 100%;text-align: center;
+        @include font(20, 18);
+        margin-bottom: 21px;
+    }
+    .error-f{
+        color:#f00;
+        font-size: 13px;
+        line-height: 1;
+    }
+}
+
+.close-f {
+    position: absolute;
+    width:24px;height: 24px;
+    right: 16px;
+    top:25px;
+    cursor: pointer;
+    &:before{
+          content:"";
+          position: absolute;
+          width: 24px;
+          height: 1px;
+          background: #000;
+          transform: rotate(45deg);
+    }
+    &::after{
+      content:"";
+      position: absolute;
+      width: 24px;
+      height: 1px;
+      background: #000;
+      transform: rotate(-45deg);     
+    }
+    &:hover{
+        opacity: 0.6;
+    }
+}
+
+.form-item {
+    padding: 10px 17px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    display: flex;
+    margin-bottom: 21px;
+    span{margin-left: 17px;
+         display: flex;
+         flex-direction: column;
+         width: 100%;
+        }
+    textarea{width: 100%;min-height: 168px; border: none;}    
+    &:hover{
+        border: 1px solid rgba(0, 0, 0, 0.5); 
+    }  
+
+}
+
+.politika {
+    font-size: 13px;
+    line-height: 150%;
+    a{display: inline;}
+}

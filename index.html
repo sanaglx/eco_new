@@ -536,7 +536,7 @@
                         </p>
                     </div>
                     <div class="prefooter-but">
-                        <a href="#" class="btn btn-gradient pref-btn">Написать</a>
+                        <a href="#" class="btn btn-gradient pref-btn modal-open">Написать</a>
                     </div>
                 </div>
             </div>
@@ -600,6 +600,26 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal-form modal" style="display:none">
+        <div class="close-f"></div>
+        <div class="modal-form__title">Написать нам</div>
+        <div class="modal-form__deckr">Подзаголовок для формы с различным содержанием в несколько строк для наглядности отображения</div>
+        <form action="">
+            <div class="form-item"><img src="img/ico/boy-f.svg" alt=""><span><label for="">Ваше имя</label><input type="text" placeholder="Заполните"></span></div>
+            <div class="form-item">
+                <img src="img/ico/tel-b.svg" alt="">
+                <span><label for="">Ваш номер телефона</label>
+                    <input type="text" placeholder="Заполните">
+                </span>
+            </div>
+            <div class="form-item"><img src="img/ico/mail-f.svg" alt=""><span><label for="">Ваш e-mail</label><input type="text" placeholder="Заполните"></span></div>
+            <div class="form-item"> <label for=""></label><textarea type="text" placeholder="Ваше сообщение"></textarea></div>
+            <a href="" class="btn btn-gradient">Написать</a>
+            <div class="politika">Нажимая кнопку Отправить вы подтверждаете что ознакомлены 
+                <a href=""> с политикой конфиденциальности</a> и <a href=""> правилами обработки персональных данных </a>и принимаете их</div>
+        </form>
+    </div>
 
     <script src="js/jquery.js"></script>
     <script src="js/animat.js"></script>

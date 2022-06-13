@@ -340,3 +340,31 @@ $('body').on('click','.product-visible-all',function (e) {
 	return false;
 });
 
+/*********/
+
+$('.close-f').click(function(){
+	$(this).parent().css({"display":"none"});
+	$("body").removeClass("fixed");
+	$('.teni').hide();
+	const body = document.body;
+	const scrollY = body.style.top;
+	body.style.position = '';
+	body.style.top = '';
+	window.scrollTo(0, parseInt(scrollY || '0') * -1);
+ 
+})
+
+$('.modal-open').click(function(){
+	$('.modal-form').css({"display":"block"});
+	//$("body").addClass("fixed");
+	$('.teni').show();
+    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
+	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
+	const body = document.body;
+	body.style.position = 'fixed';
+	body.style.width = '100%';
+	body.style.top = `-${scrollY}`;
+
+	return false
+})
+
