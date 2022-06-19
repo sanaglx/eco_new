@@ -266,7 +266,7 @@ $(document).ready(function () {
 	h = $('.bkg-heder-sl').height()
    }
 	console.log(h)
-   cv($('.eml-text',h)
+   cv($('.eml-text'),h)
 
 })
 
