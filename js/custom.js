@@ -249,49 +249,50 @@ $(document).resize(function () {
 	}
 })
 
-function cv(tt,h){
-    console.log(tt)
-    if(tt< h){
-        $('.eml-text').removeClass('fix')  
-    }else{
-        $('.eml-text').addClass('fix') 
-    }
-}
+// function cv(tt,h){
+//     console.log(tt)
+//     if(tt< h){
+//         $('.eml-text').removeClass('fix')  
+//     }else{
+//         $('.eml-text').addClass('fix') 
+//     }
+// }
 
-$(document).ready(function () {
-  let h = 0	
-   if($('.page-top').height()!=undefined){
-	h = $('.page-top').height()
-   }else{
-	h = $('.bkg-heder-sl').height()
-   }
-	console.log(h)
-   cv($('.eml-text'),h)
+// $(document).ready(function () {
+//   let h = 0	
+//    if($('.page-top').height()!=undefined){
+// 	h = $('.page-top').height()
+//    }else{
+// 	h = $('.bkg-heder-sl').height()
+//    }
+// 	console.log(h)
+//    cv($('.eml-text'),h)
 
-})
+// })
 
-$(document).scroll(function(){
-	let h = 0	
-	if($('.page-top').height()!=undefined){
-	 h = $('.page-top').height()
-	}else{
-	 h = $('.bkg-heder-sl').height()
-	}
-    cv(window.pageYOffset+$('.eml-text').position().top,h)
-})
+// $(document).scroll(function(){
+// 	let h = 0	
+// 	if($('.page-top').height()!=undefined){
+// 	 h = $('.page-top').height()
+// 	}else{
+// 	 h = $('.bkg-heder-sl').height()
+// 	}
+//     cv(window.pageYOffset+$('.eml-text').position().top,h)
+// })
 
 $(document).ready(function () {
 	//прокрутка фиксировать 	
-	// $(window).scroll(function () {
-	// 	var st = $(window).scrollTop();
-	// 	if (st > 100) {
-	// 		$('.top-down').addClass("fix");
-	// 		$('.eml-text').addClass("fix");
-	// 	} else {
-	// 		$('.top-down').removeClass("fix");
-	// 		$('.eml-text').removeClass("fix");
-	// 	}
-	// });
+
+	$(window).scroll(function () {
+		var st = $(window).scrollTop();
+		if (st > 100) {
+			$('.top-down').addClass("fix");
+			$('.eml-text').addClass("fix");
+		} else {
+			$('.top-down').removeClass("fix");
+			$('.eml-text').removeClass("fix");
+		}
+	});
 
 	//вверх
 	$('body').on('click', '.top-down', function (e) {
@@ -399,3 +400,21 @@ $('.modal-open').click(function(){
 	return false
 })
 
+function hederHeight(sel,h=0){
+	if ($(sel).length && !$(sel).is(":hidden")){
+		let a = $(sel).offset().top
+		console.log(a + "|" + sel)
+		$('.page-top1').css({'height':a+h+'px'})
+	}
+}
+
+$(document).ready(function () {
+	hederHeight('.for-news',180)
+	hederHeight('.for-header',0)
+
+})
+
+$(window).on('resize', function () {
+	hederHeight('.for-news',180)
+	hederHeight('.for-header',0)
+})

@@ -431,6 +431,11 @@ h3,
 }
 
 /*****************/
+footer ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 .prefooter-all {
     width: 100%;
     background: radial-gradient(57.61% 270.95% at 24.07% 29.47%, rgba(95, 182, 179, 0.7) 0%, rgba(115, 177, 82, 0) 100%)
@@ -475,11 +480,6 @@ h3,
     border-top-right-radius: 30px;
     position: relative;
     // margin-top: -30px;
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
 }
 .top-foot {
     display: flex;
@@ -622,14 +622,32 @@ h3,
 
 /******catalog***************/
 .page-top {
-    background: radial-gradient(39.6% 161.87% at 1.56% 89.6%, rgba(95, 182, 179, 0.7) 0%, rgba(115, 177, 82, 0) 100%),
-        #363636;
-    border-bottom-right-radius: 40px;
-    border-bottom-left-radius: 40px;
+//   background: radial-gradient(39.6% 161.87% at 1.56% 89.6%, rgba(95, 182, 179, 0.7) 0%, rgba(115, 177, 82, 0) 100%),#363636;
+//    border-bottom-right-radius: 40px;
+//    border-bottom-left-radius: 40px;
     padding-top: 40px;
-    header {
+      header {
         margin-top: 0;
     }
+}
+.page-top1{
+    background: radial-gradient(39.6% 161.87% at 1.56% 89.6%, rgba(95, 182, 179, 0.7) 0%, rgba(115, 177, 82, 0) 100%),#363636;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: absolute;
+    top:0;width: 100%;
+    z-index: -1;
+    height: 240px;
+    //padding-top: 240px;
+
+}
+.page-fill-bkg{
+    background: radial-gradient(39.6% 161.87% at 1.56% 89.6%, rgba(95, 182, 179, 0.7) 0%, rgba(115, 177, 82, 0) 100%),#363636;
+    position: absolute;
+    width: 100%;height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .breadcrumb {
@@ -838,12 +856,16 @@ h3,
     gap: 4%;
     h1 {
         color: #fff;
-        margin-bottom: 78px;
+        margin: 0; /* Убираем внешний отступ */
+        -webkit-line-clamp: 2; /* Число отображаемых строк */
+        display: -webkit-box; /* Включаем флексбоксы */
+        -webkit-box-orient: vertical; /* Вертикальная ориентация */
+        overflow: hidden;
     }
     .product__line {
         display: flex;
         gap: 44px;
-        margin-bottom: 48px;
+        margin:78px 0 48px;
     }
     .product__line_brend,
     .product__line_country {
@@ -873,12 +895,13 @@ h3,
         @include border(40,16);
         padding: 90px;
         background: #fff;
-        position: absolute;
+        //position: absolute;
         bottom: 0px;
         filter: drop-shadow(0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12));
         max-width: 695px;
         width: 100%;
         max-height: 617px;
+        margin: 20px auto 0;
         img {
             width: 100%;
             height: 100%;
@@ -886,7 +909,7 @@ h3,
         }
     }
     &-descr {
-        margin: 46px 0 30px;
+        padding : 46px 0 30px;
         &__tile {
             margin-bottom: 14px;
         }
