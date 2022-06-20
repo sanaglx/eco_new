@@ -6,7 +6,7 @@
     --color-a: #29bae2;
     --color-ah: #838181;
 }
-
+html{height: 100%;}
 body {
     //background-color: #e5e5e5;
     background-color: #ffffff;
@@ -119,6 +119,7 @@ h3,
         background: #fff;
     }
 }
+
 .product-visible-all {
     padding: 10px 20px;
     width: 100%;
@@ -1532,6 +1533,84 @@ footer ul {
     margin-bottom: 105px;
 }
 
+.bl404+footer{
+  //  position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.b404-1{
+  background: url(../img/bkg404.png) 86% no-repeat;  
+   background-size: contain;
+   padding: 0px 122px 96px 0;
+ //  position: absolute;
+}
+.b404 {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__title {
+        font-weight: 700;
+        @include font(308,108);
+        line-height: 100%;
+        position: relative;
+        &::before{
+            position: absolute;
+            @include font(308,108);
+            left:0;top: 0;
+            content: "404";
+           background: linear-gradient(180deg, #5DC5EC -0.03%, #75AC2C 98.74%); 
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+              background-clip: text;
+        text-fill-color: transparent;
+        }
+        &::after{
+            position: absolute;
+            content: "404";
+            font-weight: 700;
+            @include font(308,108);
+            color: transparent;
+            -webkit-text-stroke: 1px #75AC2C;
+            top: 10px;
+            left: 15px;
+            z-index: -1;
+        }
+    }
+}
+.b404-block {
+  
+    &__text {
+        @include font(24,16); 
+        margin-bottom: 50px;
+        color:#fff;
+        max-width: 54%;
+    }
+}
+.b404-block2 {
+    display: flex;
+    gap:32px;
+    a{
+        color:#62AB08;
+        font-size: 13px;
+        &:hover{opacity: 0.6;}
+    }
+}
+.fl404{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .page-top{
+        flex:1 30%;
+        width: 100%;
+    }
+    .bl404{
+        flex:1 50%;
+    }
+}
+
+
 
 
 @import "404";
@@ -1541,4 +1620,5 @@ footer ul {
 @import "_formModal";
 @import "news";
 @import "new";
+@import "cart";
 

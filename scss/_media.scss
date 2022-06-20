@@ -200,7 +200,26 @@
     .stati{
         margin-bottom: 40px;
     }
+
+    .b404{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &-block{
+            text-align: center;
+            max-width: 290px;
+            margin:22px auto;
+            &__text{max-width: initial;}
+        }
+        &-block2{justify-content: center;}
+        &__block{
+            max-width: 290px;
+            
+        }
+        &-1{    padding: 0px 47px 38px 0;}
+    }
 }
+
 
 @media (max-width: 567px) {
     .sl-img,

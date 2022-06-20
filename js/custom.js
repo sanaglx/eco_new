@@ -418,3 +418,40 @@ $(window).on('resize', function () {
 	hederHeight('.for-news',180)
 	hederHeight('.for-header',0)
 })
+
+$(document).ready(function () {
+    $('.minus').click(function () {
+      var th = $(this);
+      var $input = $(this).parent().find('input');
+  
+      if ($input.hasClass('opt')) {
+        var zn = find_iz($(th));
+        var count = parseInt($input.val());
+  
+        if (count > zn) {
+          count = count / 2;
+        }
+  
+        
+      } else {
+        var count = parseInt($input.val()) - 1;
+      }
+  
+      count = count < 1 ? 1 : count;
+      $input.val(count);
+      $input.change();
+      return false;
+    })
+	$('.plus').click(function () {
+		var $input = $(this).parent().find('input');
+	
+		if ($input.hasClass('opt')) {
+		  $input.val(parseInt($input.val()) * 2);
+		} else {
+		  $input.val(parseInt($input.val()) + 1);
+		}
+	
+		$input.change();
+		return false;
+	  });
+})
