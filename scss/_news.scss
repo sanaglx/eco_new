@@ -87,18 +87,22 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            border: 1px solid rgba(0, 0, 0, 0.05);
+            border: 3px solid rgba(0, 0, 0, 0.00);
             background-color: #fff;
             color:var(--color-font);
+            transition: 0.3s all;
             &:hover{
                 color:var(--color-ah);
             }
+            &.active::before,
             &:hover::before{
-                content:"";
-                background: linear-gradient(180deg, #75ac2c  -0.03%,  #5dc5ec 98.74%);
-                width: 50px;height: 50px;
+                content: "";
+                background: linear-gradient(180deg, #75ac2c -0.03%, #5dc5ec 98.74%);
+                width: 54px;
+                height: 54px;
                 position: absolute;
-                left: -2px;top: -2px;
+                left: -6px;
+                top: -6px;
                 border-radius: 50%;
                 z-index: -1;
                 transition: 0.3s all;
@@ -151,11 +155,17 @@
     .pagination{gap:6px;}
     .pagination li a{
         width: 30px;height: 30px;
-        &:hover::before{
+        &:hover::before,
+        &.active::before
+        {
             content:"";
-            width:32px;height: 32px;
+            width:36px;height: 36px;
         }
     }
    .pagination li:last-child img {height: 12px;}
    .pagination li:first-child img {height: 12px;}
+ 
+
 }
+.pagination li:last-child a::before  {background:none ;}
+.pagination li:first-child a::before  {background: none;}
