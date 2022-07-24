@@ -209,6 +209,35 @@ $(function ($) {
 		nav: false,
 	})
 
+	$(".slider-doc").owlCarousel({
+		//center:true,
+		stagePadding: 0,
+		//loop: true,
+		items: 1,
+		margin: 20,
+		//autoplay: true,
+		dots: true,
+		nav: false,
+		navText: ["<i class='news-str-left' aria-hidden='true'><img src='img/ico/left.svg'></i>",
+			"<i class='news-str-right' aria-hidden='true'><img src='img/ico/right.svg'></i>"],
+		responsive: {
+			0: {
+				dots: false,
+				nav: true,
+			},
+			600: {
+				dots: true,
+				nav: true,
+				items: 2,
+			},
+			920: {
+				dots: true,
+				nav: false,
+				items: 3,
+			},
+		}
+	});
+    
 })
 
 function theRotator() {

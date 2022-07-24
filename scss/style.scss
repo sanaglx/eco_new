@@ -73,6 +73,11 @@ h3,
     line-height: 120%;
     color: var(--color-font);
 }
+h4,.h4 {
+    font-weight: 400;
+    @include font(24, 16);
+    line-height: 130%;
+}
 
 .btn {
     border-radius: 16px;
@@ -1621,5 +1626,8 @@ footer ul {
 @import "news";
 @import "new";
 @import "cart";
+@import "servis";
+@import "ocompany1";
+@import "servise1";
 //@import "servis.scss";
 
