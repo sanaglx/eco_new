@@ -314,6 +314,15 @@ $(document).ready(function () {
 
 	$(window).scroll(function () {
 		var st = $(window).scrollTop();
+		if(st>0){
+			$('header').addClass("fixnc");
+			//$('.page-top').addClass("fixplus");
+			$('body').addClass("fixplus");
+		}else{
+			$('header').removeClass("fixnc");
+			//$('.page-top').removeClass("fixplus");
+			$('body').removeClass("fixplus");
+		}
 		if (st > 100) {
 			$('.top-down').addClass("fix");
 			$('.eml-text').addClass("fix");

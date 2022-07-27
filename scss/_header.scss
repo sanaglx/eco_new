@@ -60,15 +60,15 @@ header {
     left: 72px;
     .soc_a {
         margin-bottom: 5px;
-        &:hover img{
-            background: rgba(41, 186, 226, 0.5); 
-            border-radius: 50%;  opacity:0.6;
+        &:hover img {
+            background: rgba(41, 186, 226, 0.5);
+            border-radius: 50%;
+            opacity: 0.6;
         }
-        &:active img{
-           opacity: 1; 
+        &:active img {
+            opacity: 1;
         }
     }
-
 }
 .right-container {
     position: absolute;
@@ -155,6 +155,31 @@ header {
     flex-wrap: wrap;
 }
 
+@media (min-width: 1200px) {
+    header.fixnc {
+        position: fixed;
+        background: radial-gradient(
+                39.6% 161.87% at 1.56% 89.6%,
+                rgba(95, 182, 179, 0.7) 0%,
+                rgba(115, 177, 82, 0) 100%
+            ),
+            #363636;
+        width: 100%;
+        margin: 0;
+        padding: 40px 0 47px;
+        border-radius: 0 0 40px 40px;
+        z-index: 1000;
+        // transition: 0.3s all;
+        top: 0;
+    }
+
+    .page-top.fixplus {
+        padding-top: 160px;
+    }
+    body.fixplus {
+        padding-top: 165px;
+    }
+}
 .logo {
     margin-right: 53px;
     position: relative;
@@ -204,7 +229,7 @@ nav {
 .submenu {
     height: 0;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 8px;
     background: #fff;
     filter: drop-shadow(0px 10.1364px 81.0916px rgba(0, 0, 0, 0.12));
     position: absolute;
@@ -213,6 +238,7 @@ nav {
     min-width: 360px;
     left: 0;
     z-index: 10;
+    box-shadow: 0px 21px 59px rgb(0 0 0 / 5%);
     &::before {
         content: "";
         background: #fff;
@@ -233,13 +259,27 @@ nav {
         color: var(--color-font);
         transition: 0.3s all;
         line-height: 1.2;
-        padding: 10px 0;
+        padding: 8px 0;
         &:hover {
             color: var(--color-a);
             /*text-shadow: 0 0 1px var(--color-a);*/
         }
     }
 }
+
+.submenu::-webkit-scrollbar {
+    width: 5px;
+  }
+  .submenu::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius:0px 6px 6px 0px;
+  }
+  .submenu::-webkit-scrollbar-thumb {
+    background-color: rgba(42, 178, 240,0.8);
+    border-radius:6px 10px 10px 6px;
+    border: 1px solid #3ab198;
+  }
+
 .col-sbm {
     flex: 1;
     min-width: 280px;
@@ -256,6 +296,8 @@ nav {
     width: calc(100vw - 250px);
     display: flex;
     flex-wrap: wrap;
+    max-height: 78vh;
+    overflow: auto;
 }
 .r-line {
     border-bottom: 1px solid #ccc;
@@ -266,7 +308,7 @@ nav {
 .search {
     position: relative;
     padding: 1% 1% 1% 1%;
-    background: rgba(54, 54, 54, 0.6);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 40px;
     max-height: 48px;
     display: inherit;
@@ -341,7 +383,7 @@ nav {
         }
         &:active {
             filter: drop-shadow(0px 4px 30px rgba(99, 205, 234, 0.39));
-            border:transparent;
+            border: transparent;
             opacity: 1;
         }
     }
