@@ -425,7 +425,7 @@ $('.close-f').click(function(){
 })
 
 $('.modal-open').click(function(){
-	$(/*'.modal-form'*/'#quastion').css({"display":"block"});
+	$('.modal-form').css({"display":"block"});
 	//$("body").addClass("fixed");
 	$('.teni').show();
     document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
@@ -436,27 +436,7 @@ $('.modal-open').click(function(){
 	body.style.top = `-${scrollY}`;
 
 	return false
-});
-$('.authcall').click(function(){
-	$('#registr').css({"display":"block"});
-	//$("body").addClass("fixed");
-	$('.teni').show();
-    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-	const body = document.body;
-	body.style.position = 'fixed';
-	body.style.width = '100%';
-	body.style.top = `-${scrollY}`;
-
-	return false
-});
-$('.arhead li').click(function(){
-	var id = $(this).attr('id');
-	$(this).parents('.authregarea').find('.artab').removeClass('act');
-	$('.arhead li').removeClass('act');
-	$(this).addClass('act');
-	$("#"+id+"_b").addClass('act');
-});
+})
 
 function hederHeight(sel,h=0){
 	if ($(sel).length && !$(sel).is(":hidden")){
