@@ -3167,6 +3167,9 @@ footer ul {
   }
 }
 @media (max-width: 768px) {
+  .cart-item-quantity {
+    order: 4;
+  }
   .active-lazer {
     padding-bottom: 40px;
   }
