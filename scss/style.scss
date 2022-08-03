@@ -798,6 +798,7 @@ footer ul {
     border-radius: 2.1rem;
     padding: 2px;
     transition: 0.3s all;
+    position: relative;
     &:hover{
         background: linear-gradient(135deg,#5DC5EC
         50%, #75AC2C
@@ -843,6 +844,12 @@ footer ul {
         color: rgba(0, 0, 0, 0.5);
         margin-bottom: 4px;
         flex: 1;
+        max-height: 50px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        transition: 0.3s all;
     }
 
     &__brand {
@@ -853,6 +860,21 @@ footer ul {
         font-weight: 600;
     }
 }
+
+.cat-item__text i{
+    position: absolute;
+    font-style: normal;
+       bottom: -23px;
+       right: 0px;
+       left: 0px;
+       background: #fff;
+       /* border: 1px solid #ccc; */
+       z-index: 1000;
+       border-radius: 20px;
+       padding: 21px;
+       box-shadow: 0px 0px 15px #ccc;
+}
+
 
 /*********tovar************/
 

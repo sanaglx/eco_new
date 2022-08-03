@@ -513,3 +513,21 @@ $(document).ready(function () {
 		return false;
 	  });
 })
+
+$('.cat-item__text').hover(function(){
+	let a = $(this)
+	let b = a.text()
+
+	a.each(function(i) {
+		var number = $(this).text();
+		if ($(this).text().length > 38) {
+			a.append($('<i>',{'text':b}));
+			 a.addClass('titl-b')
+		 }
+	 });
+
+},function(){
+	 let a = $(this)
+	 a.find('i').remove()
+	} 
+)
