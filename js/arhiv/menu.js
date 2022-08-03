@@ -1,7 +1,7 @@
 var dax = new DynamicAdapt("max");  
 dax.init();
 
-/**************** 
+/**************** */
 
 $(document).ready(function() {
    $('.search input').keydown(function(e) {
@@ -24,7 +24,7 @@ $('body').on('click','.search-kn',function (){
      $('.search').addClass('active');
      return false
   });
-*************** */
+//**************** */
 $(function($){
   
  $('.menu>li>a').hover(function(){
@@ -39,11 +39,14 @@ $(function($){
       d=d+w*0.5
       console.log(d)
       console.log($(window).innerWidth())
-      a.parent().find('.submenu').css('width','calc(100vw - '+ d +'px)')
-    }else{
-
+      a.parent().find('.submenu').css({'width':'calc(100vw - '+ d +'px)'})
     }
-  })
+  },
+  function(){
+   // a.parent().find('.submenu').css({'width':'0'});
+  }
+  
+  )
 })
 
 $('body').on('mouseleave','.submenu', function(){

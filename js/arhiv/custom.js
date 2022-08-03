@@ -8,8 +8,8 @@ $(function ($) {
 		margin: 20,
 		dots: false,
 		nav: false,
-		navText: ["<i class='news-str-left' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/left.svg'></i>",
-			"<i class='news-str-right' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/right.svg'></i>"],
+		navText: ["<i class='news-str-left' aria-hidden='true'><img src='img/ico/left.svg'></i>",
+			"<i class='news-str-right' aria-hidden='true'><img src='img/ico/right.svg'></i>"],
 		responsive: {
 			0: {
 				autoWidth: true,
@@ -69,8 +69,8 @@ $(function ($) {
 		//autoplay: true,
 		dots: true,
 		nav: false,
-		navText: ["<i class='news-str-left' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/left.svg'></i>",
-			"<i class='news-str-right' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/right.svg'></i>"],
+		navText: ["<i class='news-str-left' aria-hidden='true'><img src='img/ico/left.svg'></i>",
+			"<i class='news-str-right' aria-hidden='true'><img src='img/ico/right.svg'></i>"],
 		responsive: {
 			0: {
 				dots: false,
@@ -92,8 +92,8 @@ $(function ($) {
 		//autoplay: false,
 		dots: false,
 		nav: false,
-		navText: ["<i class='news-str-left' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/left.svg'></i>",
-			"<i class='news-str-right' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/right.svg'></i>"],
+		navText: ["<i class='news-str-left' aria-hidden='true'><img src='img/ico/left.svg'></i>",
+			"<i class='news-str-right' aria-hidden='true'><img src='img/ico/right.svg'></i>"],
 		responsive: {
 			0: {
 				//center:true,
@@ -218,8 +218,8 @@ $(function ($) {
 		//autoplay: true,
 		dots: true,
 		nav: false,
-		navText: ["<i class='news-str-left' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/left.svg'></i>",
-			"<i class='news-str-right' aria-hidden='true'><img src='/bitrix/templates/bmt/img/ico/right.svg'></i>"],
+		navText: ["<i class='news-str-left' aria-hidden='true'><img src='img/ico/left.svg'></i>",
+			"<i class='news-str-right' aria-hidden='true'><img src='img/ico/right.svg'></i>"],
 		responsive: {
 			0: {
 				dots: false,
@@ -450,20 +450,6 @@ $('.authcall').click(function(){
 
 	return false
 });
-$('.goodquary').click(function(){
-	$('#goodquary').css({"display":"block"});
-	//$("body").addClass("fixed");
-	$('#goodname input').val($(this).data('good'));
-	$('.teni').show();
-    document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
-	const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
-	const body = document.body;
-	body.style.position = 'fixed';
-	body.style.width = '100%';
-	body.style.top = `-${scrollY}`;
-
-	return false
-});
 $('.arhead li').click(function(){
 	var id = $(this).attr('id');
 	$(this).parents('.authregarea').find('.artab').removeClass('act');
@@ -492,7 +478,7 @@ $(window).on('resize', function () {
 })
 
 $(document).ready(function () {
-    /*$('.minus').click(function () {
+    $('.minus').click(function () {
       var th = $(this);
       var $input = $(this).parent().find('input');
   
@@ -525,7 +511,7 @@ $(document).ready(function () {
 	
 		$input.change();
 		return false;
-	  });*/
+	  });
 })
 
 $('.cat-item__text').hover(function(){
